@@ -26,7 +26,7 @@ UserSchema.pre("save", function (next) {
   }
 });
 
-// Instance method
+// Metodo de instancia para validar contraseñas
 UserSchema.methods.isValidPassword = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
